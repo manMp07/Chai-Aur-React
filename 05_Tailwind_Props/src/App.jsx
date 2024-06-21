@@ -15,8 +15,9 @@ function App() {
 		<>
 			<h1 className='bg-green-500 text-[#432511] p-4 rounded-xl mb-10'>Tailwind Test</h1>
 
-			<Card/>
-			<Card userName = "Chai Aur React" anyObject = {myObj} arr = {newArr}/>
+			<Card userName="Man Patel" btnText = "Click Me"/>
+			<Card userName = "Chai Aur React" btnText = "Next" anyObject = {myObj} arr = {newArr}/>
+			<Card />
 		</>
 	)
 }
