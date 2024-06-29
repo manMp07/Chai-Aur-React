@@ -4,7 +4,7 @@ import App from './App.jsx'
 import './index.css'
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 import Layout from './Layout.jsx'
-import { Home,  About, Contact } from './components/'
+import { Home,  About, Contact, User, Github, githubInfoLoader } from './components/'
 
 /* const router = createBrowserRouter([
     {
@@ -33,6 +33,16 @@ const router = createBrowserRouter(
             <Route path='' element = {<Home/>} />
             <Route path='about' element = {<About/>} />
             <Route path='contact' element = {<Contact/>} />
+            <Route path='user/:userId' element = {<User/>} />
+
+            <Route
+                loader = {async () => {
+                    return fetch('https://api.github.com/users/hiteshchoudhary')
+                                .then(res => res.json());
+                }}
+                path='github'
+                element = {<Github/>} 
+            />
         </Route>
     )
 )
