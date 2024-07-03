@@ -5,11 +5,15 @@ function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
+    //const returnedObject = useContext(UserContext);
+    //const setUser = returnedObject.setUser;
+
+    // Destructuring Assignment
     const {setUser} = useContext(UserContext);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setUser(username, password);
+        setUser({username, password});
     }
 
     return (
