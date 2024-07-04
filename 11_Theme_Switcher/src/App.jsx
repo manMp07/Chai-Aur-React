@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Card from "./components/Card";
 import ThemeBtn from "./components/ThemeBtn";
-import { ThemeProvider } from "./contexts/Theme";
+import { ThemeContext } from "./contexts/Theme";
 
 function App() {
 
@@ -21,7 +21,7 @@ function App() {
     }, [themeMode]);
     
     return (
-        <ThemeProvider value={{themeMode, lightMode, darkMode}}>
+        <ThemeContext.Provider value={{themeMode, lightMode, darkMode}}>
 
             <div className="flex flex-wrap min-h-screen items-center">
                 <div className="w-full">
@@ -35,7 +35,7 @@ function App() {
                 </div>
             </div>
 
-        </ThemeProvider>
+        </ThemeContext.Provider>
     )
 }
 
