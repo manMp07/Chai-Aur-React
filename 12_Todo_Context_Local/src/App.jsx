@@ -17,7 +17,7 @@ function App() {
         setTodoList( prev => prev.filter( (todoItem) => todoItem.id !== id))
     }
 
-    const toggleTodo = (id) => {
+    const toggleTodo = async (id) => {
         setTodoList(prev => prev.forEach((todoItem) => {
             if(todoItem.id === id)
                 todoItem.completed = !todoItem.completed;
@@ -25,7 +25,7 @@ function App() {
     }
 
     useEffect(() => {
-        const todos = JSON.parse(localStorage.get("todos"))
+        const todos = JSON.parse(localStorage.getItem("todos"))
 
         if(todos && todos.length > 0)
             setTodoList(todos);
@@ -41,10 +41,18 @@ function App() {
                 <div className="w-full max-w-2xl mx-auto shadow-md rounded-lg px-4 py-3 text-white">
                     <h1 className="text-2xl font-bold text-center mb-8 mt-2">Manage Your Todos</h1>
                     <div className="mb-4">
-                        <TodoForm />
+                        {/* Todo Form Goes Here */}
+                        <TodoForm />    
                     </div>
                     <div className="flex flex-wrap gap-y-3">
-                        <TodoItem />
+                        {/*Loop and Add TodoItem here */}
+                        {
+                            todoList.map(todo => {
+                                return <div key={todo.id} className="w-full">
+                                    <TodoItem todo = {todo} />
+                                </div>
+                            })
+                        }
                     </div>
                 </div>
             </div>

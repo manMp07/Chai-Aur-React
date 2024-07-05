@@ -1,15 +1,16 @@
 import React, { useState } from "react";
-import useTodo from '../context'
+import { useTodo } from '../context/TodoContext'
 
 function TodoForm() {
-    const [todoItem, setTodo] = useState(null);
+    const [todo, setTodo] = useState("");
 
-    const {addTodo} = useTodo;
+    const {addTodo} = useTodo();
 
     const addToList = (e) => {
         e.preventDefault();
         if(!todo) return;
 
+        //addTodo({id : Date.now(), todo : todo, completed : false});
         addTodo({id : Date.now(), todo, completed : false});
         setTodo("");
     }
