@@ -10,18 +10,17 @@ function App() {
     }
 
     const updateTodo = (id, todo) => {
-        setTodoList(prev => prev.map((todoItem) => todoItem.id === id ? todo : prev))
+        setTodoList(prev => prev.map((todoItem) => todoItem.id === id ? todo : todoItem))
     }
 
     const deleteTodo = (id) => {
         setTodoList( prev => prev.filter( (todoItem) => todoItem.id !== id))
     }
 
-    const toggleTodo = async (id) => {
-        setTodoList(prev => prev.forEach((todoItem) => {
-            if(todoItem.id === id)
-                todoItem.completed = !todoItem.completed;
-        }))
+    const toggleTodo = (id) => {
+        setTodoList(prev => prev.map((todoItem) => (
+            todoItem.id === id ? {...todoItem, completed : !todoItem.completed} : todoItem
+        )))
     }
 
     useEffect(() => {
@@ -49,7 +48,7 @@ function App() {
                         {
                             todoList.map(todo => {
                                 return <div key={todo.id} className="w-full">
-                                    <TodoItem todo = {todo} />
+                                    <TodoItem singleTodo = {todo} />
                                 </div>
                             })
                         }
