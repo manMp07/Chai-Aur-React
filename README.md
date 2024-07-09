@@ -1,7 +1,7 @@
-## Chai-Aur-React
+# Chai-Aur-React
 Learn React.JS
 
-# Topics Covered : 
+## Topics Covered : 
 1. React Setup
 2. Custom React & React Components
 3. Hooks : useState, useEffect, useCallback, useRef, useId
