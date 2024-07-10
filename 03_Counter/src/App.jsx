@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function App() {
-	// let [variableName, methodName] = useState(KuchBhii) ---> 2 length ka array return krta hai 
+	// let [variableName, methodName] = useState(Default_Value) ---> 2 length ka array return krta hai 
 
 	const [counter, setCounter] = useState(15);
 

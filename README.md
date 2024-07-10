@@ -9,4 +9,4 @@ Learn React.JS
 5. React Routers : createBrowserRouter(), useLoaderData(), Link, NavLink, Outlet
 6. Context API : createContext(), useContext()
 7. Local Storage : setItem(), getItem()
-8. react-redux & Redux-Toolkit : store, reducer, state, action useDispatch(), useSelector() 
+8. react-redux & Redux-Toolkit : store, reducer, state, action, useDispatch(), useSelector() 

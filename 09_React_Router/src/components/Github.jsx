@@ -29,7 +29,7 @@ function Github() {
 
 export default Github;
 
-// Why This is not working?
+// Why This is not working? ---> index.js me "default import" krr rha tha
 /* export const githubInfoLoader = async () => {
     const response = await fetch('https://api.github.com/users/hiteshchoudhary');
     return response.json();
