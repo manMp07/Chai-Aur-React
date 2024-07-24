@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import './App.css'
 import { useDispatch } from 'react-redux'
 import authService from "./appwrite/auth"
 import {login, logout} from "./store/authSlice"
@@ -27,7 +26,7 @@ function App() {
         <div className='w-full block'>
             <Header />
             <main>
-            TODO:  <Outlet />
+            <Outlet />
             </main>
             <Footer />
         </div>

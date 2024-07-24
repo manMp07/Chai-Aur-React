@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import appwriteService from "../appwrite/conf";
+import appwriteService from "../appwrite/conf"
 import {Container, PostCard} from '../components'
 
 function Home() {
@@ -31,6 +31,7 @@ function Home() {
 
     return (
         <div className='w-full py-8'>
+            {console.log("Posts are more present")}
             <Container>
                 <div className='flex flex-wrap'>
                     {posts.map((post) => (
