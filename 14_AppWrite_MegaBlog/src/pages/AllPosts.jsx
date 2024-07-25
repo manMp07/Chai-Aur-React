@@ -11,6 +11,15 @@ function AllPosts() {
             setPosts(posts.documents)
         }
     })
+
+    if(posts.length == 0){
+        return (
+            <div className='w-full py-8 flex justify-center text-2xl font-bold'>
+                No Posts Found
+            </div>
+        )
+    }
+
     return (
         <div className='w-full py-8'>
             <Container>
@@ -21,7 +30,7 @@ function AllPosts() {
                         </div>
                     ))}
                 </div>
-                </Container>
+            </Container>
         </div>
     )
 }
