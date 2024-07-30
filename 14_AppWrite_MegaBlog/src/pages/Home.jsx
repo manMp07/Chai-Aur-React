@@ -34,7 +34,6 @@ function Home() {
 
     return (
         <div className='w-full py-8'>
-            {console.log("Posts are more present")}
             <Container>
                 <div className='flex flex-wrap'>
                     {posts.map((post) => (
