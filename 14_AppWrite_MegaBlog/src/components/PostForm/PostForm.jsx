@@ -35,6 +35,7 @@ export default function PostForm({ post }) {
             
         } else {
             const file = await appwriteService.uploadFile(data.image[0]);
+            console.log(userData);
 
             if (file) {
                 const fileId = file.$id;
@@ -93,7 +94,7 @@ export default function PostForm({ post }) {
                     label="Featured Image :"
                     type="file"
                     className="mb-4"
-                    accept="image/png, image/jpg, image/jpeg, image/gif, image/webp"
+                    accept="image/png, image/jpg, image/jpeg, image/gif"
                     {...register("image", { required: !post })}
                 />
                 {post && (
