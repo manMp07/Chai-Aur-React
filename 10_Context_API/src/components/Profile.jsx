@@ -6,7 +6,7 @@ function Profile() {
 
     if(!user) return <div>User Not Found</div>
     
-    return <div>Welcome {user.username}</div>
+    return <div>Welcome {user.username} with password {user.password}</div>
 }
 
 export default Profile;
